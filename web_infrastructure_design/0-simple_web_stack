@@ -1,3 +1,5 @@
+Specifics about this infrastructure.
+
 A server :
 A server is a hardware device or software that accepts and responds to requests over a network.
 It provides functionality for other programs or devices, known as clients.
@@ -26,3 +28,18 @@ Applications connect to the database to retrieve or store data.
 Server's communication by computer with users :
 The server communicates with the user’s computer via the Hypertext Transfer Protocol (HTTP).
 When a browser requests a file hosted on the server, it sends an HTTP request, and the server responds with the requested file via HTTP.
+
+Issues are with this infrastructure
+
+SPOF :
+A Single Point of Failure (SPOF) refers to a component or system within an IT infrastructure that, if it fails, can lead to the entire system’s breakdown.
+
+Downtime :
+When maintenance is required (such as deploying new code), the web server needs to be restarted.
+During this restart, the website may experience downtime, rendering it inaccessible to users.
+Frequent restarts can disrupt user experience and impact business continuity.
+
+Scale in traffic :
+If the infrastructure cannot handle a sudden surge in incoming traffic, it lacks scalability.
+Scalability ensures that the system can accommodate increased load without compromising performance. 
+Without proper scalability measures, the website may become slow, unresponsive, or even crash during peak traffic periods.
