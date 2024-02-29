@@ -1,0 +1,44 @@
+Distributed web infrastructure
+
+Why adding Load Balancer ?
+
+Because it istributes network or application traffic across a number of servers to increase capacity
+(concurrent users) and reliability of applications.
+
+
+What distribution algorithm ?
+
+The load balancer could be configured with a round-robin distribution algorithm.
+This means it distributes client requests evenly across all servers.
+If a server goes down, the load balancer redirects traffic to the remaining online servers.
+
+
+Active-Active or Active-Passive Setup ans difference :
+
+In an Active-Active setup, all servers are running and receiving traffic.
+In an Active-Passive setup, some servers are only used if the active servers fail.
+So the load balancer setup in this case is Active-Active as all web servers are designed to share the load at all times.
+
+
+Database Primary-Replica (Master-Slave) cluster :
+
+Primary Node (Master): The primary node is responsible for handling all write operations. 
+When a change is made to the data (like creating, updating, or deleting a record), this operation is performed on the primary node.
+
+Replica Nodes (Slaves): The replica nodes are read-only copies of the primary node. 
+They replicate the data from the primary node in real-time (or near real-time), providing redundancy and increasing the system’s read capacity.
+When a read operation (like a SELECT statement in SQL) is performed, it can be handled by any of the replica nodes.
+
+
+Difference ? :
+
+In a Primary-Replica setup, the primary node (master) handles all write operations and can handle read operations.
+The replica nodes (slaves) are read-only and replicate the primary node to provide redundancy and read scalability.
+
+
+Issues with this Infrastructure :
+
+With SPOF : If the load balancer goes down, the entire system fails.
+With Security Issues : Without a firewall or HTTPS, the system is vulnerable to attacks.
+Without Monitoring: Without monitoring, it’s difficult to identify and troubleshoot issues in real-time.
+
