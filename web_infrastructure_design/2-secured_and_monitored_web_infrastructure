@@ -1,11 +1,39 @@
-Here the added elements are:
+Secured and monitored web infrastructure
 
-- 3 Firewalls for to anticipate a computer threat.
 
-- 1 SSL (Secure Sockets Layer) for to guarantee confidentiality so that the data is indecipherable for anyone who tries to use it for malicious purposes.
+Firewalls is designed to protect your Information System from external threats,
+by filtering the flow of data between the network and your computers.
+
+Traffic is served over HTTPS to secure communication between client and server by encrypting transmitted data.
+
+SSL (Secure Sockets Layer) for to guarantee confidentiality so that the data is indecipherable for anyone who tries to use it for malicious purposes.
 Authentication to verify that it is not a spoofer and
 integrity to ensure the integrity of the data, verifying that the data is not tampered with before reaching its intended recipient.
 
-- 3 Monitoring clients, they are there to monitor server status like CPU, memory and disk. Performance of Queries Per Second (QPS).
+Monitoring clients, they are there to monitor server status like CPU, memory and disk. Performance of Queries Per Second (QPS).
 Alerts for issues like high CPU usage or low disk availability.
 And generates periodic reports on server status and performance, to optimize performance.
+They collect data using website tracking tools. 
+By customer transaction data they see on the order history.
+Data on e-mail newsletters and blog subscriptions.
+Surveys, promotions and contests, Social media, and Customer relationship management (CRM) software.
+This data is then sent to a centralized monitoring service for analysis and reporting1.
+
+There are several ways to monitor your web server's QPS:
+
+Use a monitoring tool like Prometheus or Apache JMeter.
+Configure the monitoring tool to monitor your web server. 
+Once you've configured the monitoring tool, you can usually monitor by consulting the monitoring tool's dashboard.
+Finally, analyze the monitoring data to understand how your web server is performing.
+
+
+Issues are with this infrastructure
+
+Terminating SSL at the load balancer level is an issue because as traffic
+between the load balancer and web servers is not encrypted, which can be a vulnerability.
+
+Having only one MySQL server capable of accepting writes is an issue because
+if this server goes down, you won't be able to write new data.
+
+Having servers with all the same components might be a problem because as it doesn't allow a
+clear separation of concerns and can lead to performance problems.
