@@ -1,0 +1,11 @@
+Here the added elements are:
+
+- 3 Firewalls for to anticipate a computer threat.
+
+- 1 SSL (Secure Sockets Layer) for to guarantee confidentiality so that the data is indecipherable for anyone who tries to use it for malicious purposes.
+Authentication to verify that it is not a spoofer and
+integrity to ensure the integrity of the data, verifying that the data is not tampered with before reaching its intended recipient.
+
+- 3 Monitoring clients, they are there to monitor server status like CPU, memory and disk. Performance of Queries Per Second (QPS).
+Alerts for issues like high CPU usage or low disk availability.
+And generates periodic reports on server status and performance, to optimize performance.
