@@ -3,6 +3,14 @@ Specifics about this infrastructure.
 A server :
 A server is a hardware device or software that accepts and responds to requests over a network.
 It provides functionality for other programs or devices, known as clients.
+It's usually located in special facilities called data centers.
+A server can be both physical and virtual.
+A physical server is a dedicated computer that hosts applications and services.
+A virtual server or VPS (Virtual Private Server) is a system for converting a physical server into several
+independent virtual machines (VMs) that act autonomously like a physical device.
+A server runs an operating system (OS), which is software that manages the system's hardware and software 
+resources and provides services to a number of programs.
+
 
 Domain names's role :
 They serve to identify Internet resources, such as computers, networks, and services,
@@ -11,15 +19,16 @@ A domain name may represent entire collections of such resources or individual i
 
 Type of DNS record is “www” in “www.foobar.com :
 The DNS record for “www” is typically a CNAME (Canonical Name). 
-It acts as an alias, redirecting queries to another domain name.
+It acts as an alias, redirecting queries to another domain name an IP address.
 
 Web server's role :
 A web server hosts and serves web pages and other resources to users via the Internet.
 It responds to HTTP requests from browsers by sending the necessary files (such as HTML documents, images, etc.).
+These web pages are generally static, meaning that they are preconceived and do not change according to the user.
 
 Application server's role :
 An application server hosts the business logic of an application. It handles transactions, security, and access to hosted files.
-Application servers are used to run complex and dynamic applications.
+Application servers are used to run complex and dynamic content.
 
 Database's role :
 A database stores, manages, and retrieves data. It is used to store structured information, such as user data, products, etc.
